@@ -13,6 +13,7 @@ class Graph:
         self.graph = defaultdict(list)  # Adjacency list for Prim's
         self.edges = []  # Edge list for Kruskal's
 
+
     def add_edge(self, u, v, weight):
         # Add edge for Prim's (undirected graph)
         self.graph[u].append((v, weight))
