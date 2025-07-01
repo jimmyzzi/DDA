@@ -9,6 +9,7 @@ SETUP:
 -> Open a terminal or command prompt in the directory containing mst_algorithms.py.
 
 Running the Program:
+
 Execute the script using the command:
 python .py
 
