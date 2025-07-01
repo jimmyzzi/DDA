@@ -11,7 +11,7 @@ SETUP:
 Running the Program:
 
 Execute the script using the command:
-python .py
+python DAA Assignment1 Q1.py
 
 The program will:
 
