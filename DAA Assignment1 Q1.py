@@ -6,6 +6,7 @@ import time
 import random
 from collections import defaultdict
 
+
 class Graph:
     def __init__(self, vertices):
         self.V = vertices  # Number of vertices
