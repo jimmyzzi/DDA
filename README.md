@@ -13,6 +13,7 @@ Execute the script using the command:
 python .py
 
 The program will:
+
 -> Run two example test cases with small graphs (4 and 5 vertices) and print the MST edges and total weights for both Prim's and Kruskal's algorithms.
 -> Perform a performance comparison on randomly generated graphs with 10, 50, 100, and 500 vertices, using an edge density of 0.3 and averaging over 5 trials.
 
