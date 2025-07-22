@@ -1,29 +1,29 @@
-## ***QUSETION 1***##
+## ***QUESTION 1***
 
-### ***PREREQUISITE:***###
+### ***PREREQUISITE:***
 
 -> Ensure you have Python 3.x installed on your system.
 
 -> No external libraries are required as the code uses standard Python libraries (heapq, time, random, collections).
 
-### ***SETUP:***###
+### ***SETUP:***
 
 -> Save the code above in a file named mst_algorithms.py.
 
 -> Open a terminal or command prompt in the directory containing mst_algorithms.py.
 
-Running the Program:
+***Running the Program:***
 
-Execute the script using the command:
-python DAA Assignment1 Q1.py
+-> Execute the script using the command:
+     python DAA Assignment1 Q1.py
 
-The program will:
+***The program will:***
 
 -> Run two example test cases with small graphs (4 and 5 vertices) and print the MST edges and total weights for both Prim's and Kruskal's algorithms.
 
 -> Perform a performance comparison on randomly generated graphs with 10, 50, 100, and 500 vertices, using an edge density of 0.3 and averaging over 5 trials.
 
-### ***OUTPUT:***###
+### ***OUTPUT:***
 
 -> The output will include:
 
@@ -35,22 +35,24 @@ The program will:
 
 Example 1: Small graph with 4 vertices
 
-Prim's MST: ([(0, 3, 5), (3, 2, 4), (0, 1, 10)], 19)
+   Prim's MST: ([(0, 3, 5), (3, 2, 4), (0, 1, 10)], 19)
 
-Kruskal's MST: ([(2, 3, 4), (0, 3, 5), (0, 1, 10)], 19)
+   Kruskal's MST: ([(2, 3, 4), (0, 3, 5), (0, 1, 10)], 19)
 
 Example 2: Small graph with 5 vertices
 
-Prim's MST: ([(0, 1, 2), (1, 2, 3), (1, 4, 5), (0, 3, 6)], 16)
+   Prim's MST: ([(0, 1, 2), (1, 2, 3), (1, 4, 5), (0, 3, 6)], 16)
 
-Kruskal's MST: ([(0, 1, 2), (1, 2, 3), (1, 4, 5), (0, 3, 6)], 16)
+   Kruskal's MST: ([(0, 1, 2), (1, 2, 3), (1, 4, 5), (0, 3, 6)], 16)
 
 
 
-### ***PERFORMANCE COMPARISON:***###
+### ***PERFORMANCE COMPARISON:***
 
 Running performance test ...
+
 Edge density: 0.3, Trials per size: 5
+
 Vertices | Prim's Time (s) | Kruskal's Time (s) | Prim's Weight | Kruskal's Weight
 ----------------------------------------------------------------------
       10 | 0.000123 | 0.000098 | 123.4 | 123.4
@@ -59,7 +61,7 @@ Vertices | Prim's Time (s) | Kruskal's Time (s) | Prim's Weight | Kruskal's Weig
      500 | 0.045678 | 0.038765 | 5678.2 | 5678.2
 
 
-### ***CUSTOMOSING THE TEST:***###
+### ***CUSTOMOSING THE TEST:***
 
 -> To modify the graph sizes for performance testing, edit the vertices_list in the if __name__ == "__main__": block.
 
@@ -68,7 +70,7 @@ Vertices | Prim's Time (s) | Kruskal's Time (s) | Prim's Weight | Kruskal's Weig
 -> To increase the number of trials for more accurate timing, modify the trials parameter.
 
 
-### ***PERFORMANCE ANALYSIS:***###
+### ***PERFORMANCE ANALYSIS:***
 
 -> Prim's Algorithm: Uses a priority queue (implemented with heapq) for an efficient O(E log V) time complexity, where E is the number of edges and V is the number of vertices.
 
