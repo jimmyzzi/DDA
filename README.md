@@ -223,3 +223,98 @@ _main(): Orchestrates the program, solving the problem and running the visualiza
 -> Performance analysis can be slow for larger N due to the exponential nature of the N-Queens problem.
 
 -> No sound effects are included due to Pyodide limitations with pygame's sound handling.
+
+
+
+
+# ***KRUSKAL'S ALGORITHM FOR MINIMUM SPANNING TREE (MST)***
+
+This Python project implements **Kruskal's Algorithm** to find the Minimum Spanning Tree (MST) of an undirected weighted graph and visualizes both the original graph and the MST using `matplotlib` and `networkx`.
+
+### ***Table of Contents***
+- [Description](#description)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Example Output](#example-output)
+- [Contributing](#contributing)
+- [License](#license)
+
+### ***DESCRIPTION***
+-> The script constructs a weighted undirected graph with 5 vertices (`A`, `B`, `C`, `D`, `E`) and 7 edges, applies Kruskal's Algorithm to compute the MST, and visualizes both the original graph and the MST side by side.
+  
+-> Kruskal's Algorithm selects edges in increasing order of weight, ensuring no cycles are formed, to create a tree that connects all vertices with the minimum total edge weight.
+
+### ***FEATURES***
+- Implements Kruskal's Algorithm using a **Disjoint-Set** data structure for cycle detection.
+- Visualizes the original graph and the MST using `networkx` and `matplotlib`.
+- Displays edge weights on both graphs.
+- Uses a consistent layout for clear comparison between the original graph and MST.
+
+### ***DEPENDENCIES***
+- Python 3.x
+- `matplotlib` (for plotting)
+- `networkx` (for graph creation and manipulation)
+
+### ***INSTALLATION***
+1. Ensure Python 3.x is installed on your system.
+2. Install the required packages using pip:
+   ```bash
+   pip install matplotlib networkx
+
+    Clone or download this repository to your local machine.
+
+### ***USAGE***
+
+    Save the script as kruskal_mst.py.
+    Run the script:
+    bash
+
+    python kruskal_mst.py
+    A plot window will display two graphs:
+        Left: The original graph with light blue nodes and default edges.
+        Right: The MST with light green nodes and green edges. Edge weights are shown on both graphs.
+
+-> To modify the graph, edit the vertices and edges lists in the script:
+
+    vertices: List of node names (e.g., ['A', 'B', 'C', 'D', 'E']).
+    edges: List of tuples (vertex1, vertex2, weight) (e.g., [('A', 'B', 1), ('A', 'C', 3)]).
+
+### ***CODE STRUCTURE***
+
+    -Imports: matplotlib.pyplot and networkx for visualization and graph handling.
+    -Graph Definition: Defines vertices and weighted edges.
+    -Edge Class: Represents an edge with vertices and weight, enabling sorting by weight.
+    -DisjointSet Class: Implements Union-Find with path compression for cycle detection.
+    -kruskal_mst Function: Computes the MST using Kruskal's Algorithm.
+    -isualization: Creates side-by-side plots of the original graph and MST.
+
+### ***EXAMPLE OUTPUT***
+
+-> The script generates a plot with two subplots:
+
+    Original Graph: Shows all vertices and edges with weights (e.g., edge A-B with weight 1).
+    MST: Shows only the edges selected by Kruskal's Algorithm, forming a tree with the minimum total weight.
+
+-> For the provided graph, the MST includes edges like A-B, B-C, C-E, and C-D, depending on the weights.
+
+
+### ***CONTRIBUTING***
+
+-> Contributions are welcome! Please:
+
+    Fork the repository.
+    Create a new branch for your feature or bug fix.
+    Submit a pull request with a clear description of your changes.
+
+### ***LICENSE***
+
+-> This project is licensed under the MIT License. See the LICENSE file for details.
+text
+### ***Notes***
+- The README assumes a standard project structure and includes a generic MIT license reference. If you have a specific license or additional project details, let me know, and I can update the README.
+- The commented code improves readability for developers by explaining each section and key operations.
+- The visualization uses `spring_layout` with a fixed seed for reproducibility, but you can modify the layout or styling (e.g., colors, node sizes) as needed.
+- If you want to add more features (e.g., saving the plot, handling larger
