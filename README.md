@@ -86,4 +86,140 @@ Vertices | Prim's Time (s) | Kruskal's Time (s) | Prim's Weight | Kruskal's Weig
 -> To visualize the MST, you could extend the code with a library like matplotlib or networkx (not included here to keep dependencies minimal).
 
 -> To test with specific graphs, modify the example graph creation in the if __name__ == "__main__": block or read graphs from a file.
-     
+
+
+
+
+## ***QUESTION 2***
+
+### ***N-Queens Visualization***
+
+### ***OVERVIEW***
+
+-> This Python program visualizes solutions to the N-Queens problem using Pygame.
+
+-> The N-Queens problem involves placing N queens on an NxN chessboard such that no two queens threaten each other. 
+
+-> The program finds all possible solutions using backtracking and displays them interactively, allowing users to cycle through solutions. 
+
+-> It also includes a performance analysis for different board sizes.
+
+
+
+### ***FEATURES***
+
+_Visualization: Displays an 8x8 chessboard with queens represented by the ♕ symbol._
+
+
+_Interactive Navigation: Press the spacebar to cycle through all possible solutions._
+
+
+_Performance Analysis: Measures and prints the number of solutions and time taken for board sizes from 4 to 12._
+
+
+_Pyodide Compatibility: Runs in both browser (via Pyodide) and local Python environments._
+
+
+
+### ***REQUIREMENTS***
+
+
+-> _Python 3.7+_
+
+-> _Pygame library (pip install pygame)_
+
+-> For browser execution: _Pyodide environment_
+
+
+
+-> Optional: _asyncio for asynchronous execution_
+
+
+### ***HOW TO RUN***
+
+***Local Execution:***
+
+-> Ensure Pygame is installed: _pip install pygame_
+
+
+***Run the script:*** python n_queens.py
+
+-> A window will open showing the 8x8 chessboard with the first solution.
+
+-> Press the spacebar to cycle through solutions.
+
+->Close the window to exit.
+
+
+***Browser Execution:***
+
+-> Ensure the script is run in a Pyodide-compatible environment.
+
+-> The visualization and interaction work the same as in local execution.
+
+
+
+### ***CONTROLS***
+
+_Spacebar: Cycle through different solutions for the 8x8 board._
+
+_Close Window: Exit the program._
+
+
+
+### ***PERFORMANCE ANALYSIS***
+
+-> The program automatically runs a performance analysis for board sizes N=4 to N=12.
+
+-> It prints the number of solutions and the time taken for each N to the console.
+
+-> Results are stored in the performance_data global variable as a list of tuples (N, solutions_count, time_taken).
+
+
+
+### ***CODE STRUCTURE***
+
+_setup(): Initializes Pygame, sets up the display window, and defines global variables._
+
+
+_is_safe(): Checks if a queen can be placed at a given position without conflicts._
+
+
+_solve_n_queens(): Uses backtracking to find all solutions to the N-Queens problem._
+
+
+_initialize_board(): Creates an NxN board initialized with zeros._
+
+
+_analyze_performance(): Runs the solver for different board sizes and records performance metrics._
+
+
+_draw_board(): Renders the chessboard and queens using Pygame._
+
+
+_update_loop(): Handles events and updates the visualization asynchronously._
+
+
+_main(): Orchestrates the program, solving the problem and running the visualization loop._
+
+
+
+### ***NOTES***
+
+-> The default board size is 8x8, but the performance analysis tests sizes up to 12x12.
+
+-> The program uses a checkerboard pattern (white and black squares) for the board, with queens displayed in red.
+
+-> The backtracking algorithm ensures all solutions are found efficiently.
+
+-> The program is designed to avoid local file I/O and network calls for Pyodide compatibility.
+
+
+
+### ***LIMITATIONS***
+
+-> The visualization is fixed at 8x8 for simplicity; modifying board_size requires adjusting cell_size for proper display.
+
+-> Performance analysis can be slow for larger N due to the exponential nature of the N-Queens problem.
+
+-> No sound effects are included due to Pyodide limitations with pygame's sound handling.
